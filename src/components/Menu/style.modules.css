@@ -1,11 +1,9 @@
 .menu{
-    width:15vw;
+    width:27vw;
     display: flex;
-    gap: 60px;
+    gap: 0px;
 }
 .item{
-    width: 60px;
-    height: 30px;
     font-size: 16pt;
     font-style: italic; 
     

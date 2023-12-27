@@ -1,0 +1,21 @@
+.esquerda{
+    width: 33.33vw;
+    height: 68vh;
+    border-right: 2px solid rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16pt;
+    margin-top: 5px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

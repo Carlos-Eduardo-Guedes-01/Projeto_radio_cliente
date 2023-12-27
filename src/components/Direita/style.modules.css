@@ -1,0 +1,41 @@
+.direita{
+    width: 33.33vw;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16pt;
+    margin-top: 5px;
+    
+}
+.botoes{
+    width: 33.33vw;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+}
+.contato{
+    width: 17vw;
+    height: 40px;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: #29A71A;
+}
+.contato2{
+    width: 17vw;
+    height: 60px;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: black;
+}
