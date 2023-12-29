@@ -1,26 +1,39 @@
-import './style.modules.css'
-export default function Programacao(){
-    return(
+import './style.modules.css';
+export default function Programacao({ programacoes }) {
+    const programasManha = programacoes && programacoes.filter(programa => programa.turno === 'manha');
+    const programasTarde = programacoes && programacoes.filter(programa => programa.turno === 'tarde');
+    const programasNoite = programacoes && programacoes.filter(programa => programa.turno === 'noite');
+
+    return (
         <div className="programacao">
             <h3 className='programacao1'>Programação</h3>
+
             <p className='subtitle'>Manhã</p>
             <ul>
-                <li>Programação X - 08:00</li>
-                <li>Programação Y - 09:00</li>
-                <li>Programação Z - 12:00</li>
+                {programasManha && programasManha.map(programa => (
+                    <li key={programa.id}>
+                        {programa.nome_programacao} - {programa.horario}
+                    </li>
+                ))}
             </ul>
+
             <p className='subtitle'>Tarde</p>
             <ul>
-                <li>Programação X - 14:00</li>
-                <li>Programação Y - 15:00</li>
-                <li>Programação Z - 18:00</li>
+                {programasTarde && programasTarde.map(programa => (
+                    <li key={programa.id}>
+                        {programa.nome_programacao} - {programa.horario}
+                    </li>
+                ))}
             </ul>
+
             <p className='subtitle'>Noite</p>
             <ul>
-                <li>Programação X - 20:00</li>
-                <li>Programação Y - 21:00</li>
-                <li>Programação Z - 22:00</li>
+                {programasNoite && programasNoite.map(programa => (
+                    <li key={programa.id}>
+                        {programa.nome_programacao} - {programa.horario}
+                    </li>
+                ))}
             </ul>
         </div>
-    )
+    );
 }

@@ -1,20 +1,30 @@
-.programacao{
+.programacao {
+    text-wrap: wrap;
     width: 33.33vw;
     height: 68vh;
-    border-right: 2px solid rgba(0,0,0,0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 16pt;
     margin-top: 5px;
-}
-h3{
+    overflow-y: unset;
+    overflow-y: auto;
+  }
+  
+  h3 {
     padding: 0;
     margin: 0;
-}
-
-.subtitle{
+  }
+  
+  .subtitle {
     text-decoration: underline;
     margin-bottom: 0;
     padding-top: 1px;
-}
+  }
+  li{
+    display: flex;
+    width: 30.33vw;
+    align-items: center;
+    justify-content: center;
+  }

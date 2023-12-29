@@ -1,0 +1,12 @@
+.Geral{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 70vh;
+    min-height:70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    gap: 20px;
+}

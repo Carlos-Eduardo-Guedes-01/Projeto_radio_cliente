@@ -12,10 +12,10 @@ a{
     font-family: Helvetica, sans-serif;
     color: white;
     text-decoration: none;
-    /*-webkit-text-stroke: 2px  white;  Adiciona uma borda preta de 2 pixels */
     font-weight: bold;
     transition: 0.15s;
 }
 .item a:hover{
     font-size: 18pt;
+    text-shadow: -2px -2px 2px #1CE5F3;
 }

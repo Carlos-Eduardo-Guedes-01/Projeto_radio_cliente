@@ -1,17 +1,28 @@
 import Direita from '../../components/Direita'
 import Esquerda from '../../components/Esquerda'
+import Geral from '../../components/Geral'
 import Programacao from '../../components/Programacao'
 import Rodape from '../../components/Rodape'
-import './style.modules.css'
+import React, { useEffect, useState } from 'react';
+import { fetchProgramacoes } from '../Tools/API'
+
 export default function Home(){
+    const [programacoes, setProgramacoes] = useState([]);
+
+useEffect(() => {
+    fetchProgramacoes()
+    .then(data => {
+        setProgramacoes(data);
+    });
+}, []);
+
     return(
     <>
-        <div className='Geral'>
+        <Geral>
             <Esquerda/>
-            <Programacao/>
+            <Programacao programacoes={programacoes}/>
             <Direita/>
-            
-        </div>
+        </Geral>
         <Rodape/>
     </>
     )
