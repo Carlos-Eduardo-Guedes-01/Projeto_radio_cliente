@@ -4,7 +4,7 @@ import Geral from '../../components/Geral'
 import Programacao from '../../components/Programacao'
 import Rodape from '../../components/Rodape'
 import React, { useEffect, useState } from 'react';
-import { fetchProgramacoes } from '../Tools/API'
+import { fetchProgramacoes, fetchRadio } from '../Tools/API'
 
 export default function Home(){
     const [programacoes, setProgramacoes] = useState([]);
@@ -15,14 +15,31 @@ useEffect(() => {
         setProgramacoes(data);
     });
 }, []);
+const [whatsapp, setWhatsapp] = useState(""); // Estado para armazenar o campo whatsapp
 
+    useEffect(() => {
+        fetchRadio()
+        .then(data => {
+            setWhatsapp(data); // Armazenar apenas o campo whatsapp no estado
+        });
+    }, []);
+    const [Link_r, setLink_r] = useState(""); // Estado para armazenar o campo whatsapp
 
+    useEffect(() => {
+        fetchRadio()
+        .then(data => {
+            setLink_r(data); // Armazenar apenas o campo whatsapp no estado
+        });
+    }, []);
     return(
     <>
         <Geral>
             <Esquerda/>
             <Programacao programacoes={programacoes}/>
-            <Direita/>
+            <Direita 
+            whatsapp={whatsapp}
+            Link_radio={Link_r}
+            />
         </Geral>
         <Rodape/>
     </>

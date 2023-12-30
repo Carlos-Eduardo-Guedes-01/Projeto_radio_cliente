@@ -1,7 +1,13 @@
 import './style.modules.css';
-export default function Whatstapp(){
+export default function Whatstapp({whats}){
     return(
-        <a href='#' className='contato'><img src="./whatsapp (1).png" alt="whatsapp" width={40}/> Whatsapp</a>
-        
+        <>
+        {whats && whats.map((whatsapp,index)=>(
+            <a href={`https://wa.me/${whatsapp.Whatsapp}`} className='contato' key={index}>
+                <img src="./whatsapp (1).png" alt="whatsapp" width={40}/> Whatsapp
+            </a>
+        ))}
+            
+        </>
     )
 }
