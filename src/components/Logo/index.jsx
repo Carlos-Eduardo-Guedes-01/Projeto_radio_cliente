@@ -1,8 +1,13 @@
 import './style.modules.css';
-export default function Logo(){
+export default function Logo({logo}){
+    console.log(logo)
     return(
     <>
-    <img src="./logo_cerrado-removebg-preview.png" alt="Logo" className="logo"/>
+    {logo && logo.map(log => (
+                    <img src={log.Logo} alt="Logo" className="logo"/>
+    )
+                )}
+    
     </>
     )
 }

@@ -8,3 +8,11 @@ export const fetchProgramacoes = () => {
       return [];
     });
 };
+export const fetchRadio = () => {
+  return axios.get('http://127.0.0.1:8000/CadastroRadio/')
+  .then(response => response.data)
+  .catch(error => {
+    console.log(error);
+    return []
+  })
+};

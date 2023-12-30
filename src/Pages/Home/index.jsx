@@ -8,13 +8,14 @@ import { fetchProgramacoes } from '../Tools/API'
 
 export default function Home(){
     const [programacoes, setProgramacoes] = useState([]);
-
+    
 useEffect(() => {
     fetchProgramacoes()
     .then(data => {
         setProgramacoes(data);
     });
 }, []);
+
 
     return(
     <>
