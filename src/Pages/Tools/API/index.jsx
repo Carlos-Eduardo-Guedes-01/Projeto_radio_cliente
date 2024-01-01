@@ -17,3 +17,11 @@ export const fetchRadio = () => {
   })
 };
 
+export const fetchEquipe = () => {
+  return axios.get('http://127.0.0.1:8000/Cadastra-equipe/')
+  .then(response => response.data)
+  .catch(error => {
+    console.log(error);
+    return []
+  })
+};
